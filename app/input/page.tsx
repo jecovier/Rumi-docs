@@ -1,6 +1,7 @@
 "use client";
 import ComponentViewer from "@/components/ComponentViewer";
 import Input from "@/components/Rumi/Input";
+import InputContent from "@/components/Rumi/InputContent";
 import { MagnifyingGlassIcon, NoSymbolIcon } from "@heroicons/react/24/outline";
 
 export default function input() {
@@ -12,22 +13,22 @@ export default function input() {
           <Input type="text" />
           <Input type="text" placeholder="placeholder" />
           <Input type="text" value="normal value" />
-          <Input type="text" placeholder="prefix">
+          <InputContent type="text" placeholder="prefix">
             EC
-          </Input>
-          <Input type="text" placeholder="suffix" suffix>
+          </InputContent>
+          <InputContent type="text" placeholder="suffix" suffix>
             .COM
-          </Input>
-          <Input type="text" placeholder="icon">
+          </InputContent>
+          <InputContent type="text" placeholder="icon">
             <MagnifyingGlassIcon className="icon" />
-          </Input>
-          <Input type="text" placeholder="icon" suffix>
+          </InputContent>
+          <InputContent type="text" placeholder="icon" suffix>
             <MagnifyingGlassIcon className="icon" />
-          </Input>
+          </InputContent>
           <Input type="text" value="disabled value" disabled />
-          <Input type="text" placeholder="disabled placeholder" disabled>
+          <InputContent type="text" placeholder="disabled placeholder" disabled>
             <NoSymbolIcon className="icon" />
-          </Input>
+          </InputContent>
         </div>
       </ComponentViewer>
       <h2 className="text-xl mt-12">Sizes</h2>
@@ -43,27 +44,31 @@ export default function input() {
       <h2 className="text-xl mt-12">Types</h2>
       <ComponentViewer>
         <div className="flex flex-col items-start gap-4">
-          <Input type="color" placeholder="color" />
-          <Input type="date" />
+          <h3>Date & time</h3>
           <Input type="datetime-local" />
-          <Input type="email" placeholder="email" />
-          <Input type="hidden" placeholder="hidden" />
-          <Input type="month" placeholder="month" />
-          <Input type="number" placeholder="number" />
-          <Input type="password" placeholder="password" />
-          <Input type="range" placeholder="range" />
-          <Input type="search" placeholder="search" />
-          <Input type="tel" placeholder="tel" />
+          <Input type="date" />
           <Input type="time" placeholder="time" />
-          <Input type="url" placeholder="url" />
+          <Input type="month" placeholder="month" />
           <Input type="week" placeholder="week" />
+
+          <h3 className="mt-8">Numbers</h3>
+          <Input type="number" placeholder="number" />
+          <Input type="tel" placeholder="tel" />
+
+          <h3 className="mt-8">Texts</h3>
+          <Input type="email" placeholder="email" />
+          <Input type="url" placeholder="url" />
+          <Input type="search" placeholder="search" />
+          <Input type="password" placeholder="password" />
 
           {/* BUTTONS
           <Input type="reset" placeholder="reset" />
           <Input type="button" placeholder="button" />
           <Input type="image" placeholder="image" />
-          <Input type="submit" placeholder="submit" /> */}
+        <Input type="submit" placeholder="submit" /> */}
 
+          {/* <Input type="color" placeholder="color" />
+          <Input type="range" placeholder="range" /> */}
           {/* <Input type="checkbox" placeholder="checkbox" /> */}
           {/* <Input type="file" placeholder="file" /> */}
           {/* <Input type="radio" placeholder="radio" /> */}

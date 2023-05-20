@@ -79,3 +79,23 @@ input::placeholder, textarea::placeholder{
         transform: rotate(1turn);
     }
 }
+
+/**
+ * INPUT NUMBER
+ */
+
+/* Works for Firefox */
+input[type="number"] {
+    -webkit-appearance: none;
+    -moz-appearance: textfield;
+    appearance: textfield;
+}
+
+/* Works for Firefox */
+input[type="number"]:focus,
+input[type="number"]:hover {
+    -webkit-appearance: auto;
+    -moz-appearance: auto;
+    appearance: auto;
+}
+    
