@@ -2,26 +2,80 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
-
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+    @apply bg-light-50 text-light-600 dark:bg-dark-700 dark:text-dark-200;
+}
+
+.scale-xs {
+    @apply px-2 py-1 text-xs
+}
+.scale-sm {
+    @apply px-2.5 py-1.5 text-sm
+}
+
+.scale-md {
+    @apply px-4 py-2 text-sm
+}
+
+.scale-lg {
+    @apply px-4 py-2.5 text-base
+}
+
+.scale-xl {
+    @apply px-4 py-3 text-base
+}
+
+.icon {
+    width: 1.1em;
+    height: 1.1em;
+}
+
+input::placeholder, textarea::placeholder{
+    @apply opacity-100 text-light-400/80 dark:text-dark-400/70;
+}
+*:disabled input::placeholder,
+.disabled input::placeholder {
+    @apply text-light-600/90 dark:text-dark-300/90
+}
+
+*:disabled,
+.disabled {
+    @apply pointer-events-none opacity-50 cursor-not-allowed;
+}
+
+
+.loading,
+.loading:hover {
+    position: relative;
+    text-indent: -500vw;
+    cursor: progress;
+    opacity: 0.86;
+    pointer-events:none;
+}
+  
+.loading::after {
+    content: "";
+    position: absolute;
+    width: 1.25em;
+    height: 1.25em;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    border: 2px solid currentColor;
+    border-top-color: transparent;
+    border-right-color: transparent;
+    border-radius: 50%;
+    animation: loading-spinner 0.6s linear infinite;
+}
+
+@keyframes loading-spinner {
+    from {
+        transform: rotate(0turn);
+    }
+
+    to {
+        transform: rotate(1turn);
+    }
 }
