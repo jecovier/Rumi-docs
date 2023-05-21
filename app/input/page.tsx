@@ -4,7 +4,7 @@ import Input from "@/components/Rumi/Input";
 import InputContent from "@/components/Rumi/InputContent";
 import { MagnifyingGlassIcon, NoSymbolIcon } from "@heroicons/react/24/outline";
 
-export default function input() {
+export default function Page() {
   return (
     <>
       <h2 className="text-xl mt-12">Variants</h2>

@@ -5,7 +5,7 @@ import Button from "@/components/Rumi/Button";
 import ButtonPrimary from "@/components/Rumi/ButtonPrimary";
 import { MagnifyingGlassIcon } from "@heroicons/react/24/outline";
 
-export default function button() {
+export default function Page() {
   return (
     <>
       <h2 className="text-xl mt-12">Variants</h2>

@@ -22,7 +22,7 @@ body {
 }
 
 .scale-xl {
-    @apply px-4 py-3 text-base
+    @apply px-4 py-3 text-lg
 }
 
 .icon {
@@ -30,11 +30,11 @@ body {
     height: 1.1em;
 }
 
-input::placeholder, textarea::placeholder{
+.input::placeholder, textarea::placeholder{
     @apply opacity-100 text-light-400/80 dark:text-dark-400/70;
 }
-*:disabled input::placeholder,
-.disabled input::placeholder {
+*:disabled .input::placeholder,
+.disabled .input::placeholder {
     @apply text-light-600/90 dark:text-dark-300/90
 }
 
@@ -85,17 +85,88 @@ input::placeholder, textarea::placeholder{
  */
 
 /* Works for Firefox */
-input[type="number"] {
+.input[type="number"] {
     -webkit-appearance: none;
     -moz-appearance: textfield;
     appearance: textfield;
 }
 
 /* Works for Firefox */
-input[type="number"]:focus,
-input[type="number"]:hover {
+.input[type="number"]:focus,
+.input[type="number"]:hover {
     -webkit-appearance: auto;
     -moz-appearance: auto;
     appearance: auto;
 }
-    
+
+/**
+ * SELECT
+ */
+.select::-ms-expand {
+    display: none;
+}
+
+@layer utilities{
+    .icon-chevron-down-light {
+        background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="black" class="w-6 h-6 fill-white"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" /></svg>');
+    }
+    .icon-chevron-down-dark {
+        background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="white"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" /></svg>');
+    }
+
+    .icon-check-light {
+        background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="white"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" /></svg>');
+    }
+
+    .icon-circle-light {
+        background-image: url("data:image/svg+xml;utf-8,<svg xmlns='http://www.w3.org/2000/svg' width='1em' height='1em' fill='white' viewBox='0 0 24 24'><circle cx='12' cy='12' r='5'/></svg>");
+    }
+}
+
+.switch span::before{
+    content: " ";
+    display: block;
+    position: absolute;
+    width: 2.5em;
+    height: 1.3em;
+    top: calc(50% - 0.65em);
+    left: 0;
+    border-radius: 1em;
+    @apply dark:bg-dark-500 border dark:border-dark-500
+}
+
+.switch span::after{
+    content: " ";
+    display: block;
+    position: absolute;
+    width: 0.9em;
+    height: 0.9em;
+    background-color: currentColor;
+    top: calc(50% - 0.45em);
+    left: calc(0.2em + 1px);
+    border-radius: 100%;
+    transition: all ease-out 0.16s ;
+}
+
+.switch input:checked + span::after{
+    left: 1.35em;
+}
+.switch input:checked + span::before{
+    @apply dark:bg-primary-500 dark:border-primary-500;
+}
+
+
+.switch.suffix span::before{
+    left: auto;
+    right: 0;
+}
+
+.switch.suffix span::after{
+    left: auto;
+    right: calc(0.2em + 1px);
+}
+
+.switch.suffix input:checked + span::after{
+    left: auto;
+    right: 1.35em;
+}
