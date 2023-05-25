@@ -8,12 +8,15 @@ const menuOptions = [
   { label: "Checkbox", href: "/checkbox" },
   { label: "Switch", href: "/switch" },
   { label: "Radio", href: "/radio" },
-  { label: "Toggle", href: "/toggle" },
+  // { label: "Toggle", href: "/toggle" },
   { label: "Modal", href: "/modal" },
-  { label: "Progress", href: "/progress" },
+  { label: "Dialog", href: "/dialog" },
+  { label: "Dropdown", href: "/dropdown" },
+  { label: "Popup", href: "/popup" },
+  // { label: "Progress", href: "/progress" },
   { label: "Card", href: "/card" },
-  { label: "Divider", href: "/divider" },
-  { label: "Accordion", href: "/accordion" },
+  // { label: "Divider", href: "/divider" },
+  // { label: "Accordion", href: "/accordion" },
 ];
 
 export default function ComponentsMenu() {

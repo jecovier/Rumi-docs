@@ -1,4 +1,5 @@
-interface ButtonGroupProps extends React.ComponentPropsWithoutRef<"button"> {
+export interface ButtonGroupProps
+  extends React.ComponentPropsWithoutRef<"button"> {
   scale?: string;
 }
 

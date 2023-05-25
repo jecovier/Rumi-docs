@@ -170,3 +170,8 @@ body {
     left: auto;
     right: 1.35em;
 }
+
+dialog::backdrop {
+    background-color: rgb(4, 4, 16);
+    backdrop-filter: blur(5px);
+  }
