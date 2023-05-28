@@ -26,10 +26,10 @@ export default function ComponentViewer({
       </div>
       <footer className="border rounded-b-md border-t-0 border-light-300 dark:border-dark-600">
         <div className="flex gap-4 px-4 py-1">
-          <Button ghost scale="sm" onClick={() => toggleCode()}>
+          <Button ghost className="scale-sm" onClick={() => toggleCode()}>
             <CodeBracketIcon className="icon text-xl mr-1" /> Code
           </Button>
-          <Button ghost scale="sm" onClick={() => toggleBackground()}>
+          <Button ghost className="scale-sm" onClick={() => toggleBackground()}>
             <WindowIcon className="icon text-xl mr-1" /> Background
           </Button>
         </div>

@@ -2,7 +2,8 @@ import ButtonDialogClose from "./ButtonDialogClose";
 import Card from "./Card";
 import Dialog from "./Dialog";
 
-interface DialogGroupProps extends React.ComponentPropsWithoutRef<"dialog"> {}
+export interface DialogGroupProps
+  extends React.ComponentPropsWithoutRef<"dialog"> {}
 
 export default function Modal({
   children,
@@ -11,12 +12,12 @@ export default function Modal({
 }: DialogGroupProps) {
   return (
     <Dialog
-      className="relative w-11/12 max-w-4xl bg-transparent backdrop:bg-light-700/50 backdrop:dark:bg-dark-800/50"
+      className="modal relative w-11/12 max-w-4xl bg-transparent backdrop:bg-light-700/50 backdrop:dark:bg-dark-900/50"
       {...restProps}
     >
       <ButtonDialogClose
         className="absolute z-10 top-4 right-4"
-        scale="sm"
+        className="scale-sm"
         ghost
       >
         <svg

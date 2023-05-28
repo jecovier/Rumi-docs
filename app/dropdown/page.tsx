@@ -20,21 +20,32 @@ export default function Page() {
           <Dropdown label="Dropdown Ghost" ghost>
             <ExampleList />
           </Dropdown>
+          <div className="flex items-center gap-2">
+            <DropdownPrimary>
+              <ExampleList />
+            </DropdownPrimary>
+            <Dropdown>
+              <ExampleList />
+            </Dropdown>
+            <Dropdown ghost>
+              <ExampleList />
+            </Dropdown>
+          </div>
         </div>
       </ComponentViewer>
-      <h2>Location</h2>
+      <h2>placement</h2>
       <ComponentViewer>
         <div className="flex flex-col gap-4">
-          <Dropdown label="Location Bottom" location="bottom">
+          <Dropdown label="placement Bottom" placement="bottom">
             <ExampleList />
           </Dropdown>
-          <Dropdown label="Location Top" location="top">
+          <Dropdown label="placement Top" placement="top">
             <ExampleList />
           </Dropdown>
-          <Dropdown label="Location Right" location="right" alignY="center">
+          <Dropdown label="placement Right" placement="right" alignY="center">
             <ExampleList />
           </Dropdown>
-          <Dropdown label="Location Left" location="left" alignY="top">
+          <Dropdown label="placement Left" placement="left" alignY="top">
             <ExampleList />
           </Dropdown>
         </div>

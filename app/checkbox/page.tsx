@@ -28,18 +28,18 @@ export default function Page() {
       <ComponentViewer>
         <div className="flex flex-col">
           <div className="flex items-start gap-4">
-            <Checkbox scale="xs">scale xs</Checkbox>
-            <Checkbox scale="sm">scale sm</Checkbox>
-            <Checkbox scale="md">scale md</Checkbox>
-            <Checkbox scale="lg">scale lg</Checkbox>
-            <Checkbox scale="xl">scale xl</Checkbox>
+            <Checkbox className="scale-xs">scale xs</Checkbox>
+            <Checkbox className="scale-sm">scale sm</Checkbox>
+            <Checkbox className="scale-md">scale md</Checkbox>
+            <Checkbox className="scale-lg">scale lg</Checkbox>
+            <Checkbox className="scale-xl">scale xl</Checkbox>
           </div>
           <div className="flex items-start gap-4">
-            <CheckboxBorder scale="xs">scale xs</CheckboxBorder>
-            <CheckboxBorder scale="sm">scale sm</CheckboxBorder>
-            <CheckboxBorder scale="md">scale md</CheckboxBorder>
-            <CheckboxBorder scale="lg">scale lg</CheckboxBorder>
-            <CheckboxBorder scale="xl">scale xl</CheckboxBorder>
+            <CheckboxBorder className="scale-xs">scale xs</CheckboxBorder>
+            <CheckboxBorder className="scale-sm">scale sm</CheckboxBorder>
+            <CheckboxBorder className="scale-md">scale md</CheckboxBorder>
+            <CheckboxBorder className="scale-lg">scale lg</CheckboxBorder>
+            <CheckboxBorder className="scale-xl">scale xl</CheckboxBorder>
           </div>
         </div>
       </ComponentViewer>

@@ -34,11 +34,11 @@ export default function Page() {
       <h2 className="text-xl mt-12">Sizes</h2>
       <ComponentViewer>
         <div className="flex flex-col items-start gap-4">
-          <Input type="text" placeholder="xs" scale="xs" />
-          <Input type="text" placeholder="sm" scale="sm" />
-          <Input type="text" placeholder="md" scale="md" />
-          <Input type="text" placeholder="lg" scale="lg" />
-          <Input type="text" placeholder="xl" scale="xl" />
+          <Input type="text" placeholder="xs" className="scale-xs" />
+          <Input type="text" placeholder="sm" className="scale-sm" />
+          <Input type="text" placeholder="md" className="scale-md" />
+          <Input type="text" placeholder="lg" className="scale-lg" />
+          <Input type="text" placeholder="xl" className="scale-xl" />
         </div>
       </ComponentViewer>
       <h2 className="text-xl mt-12">Types</h2>

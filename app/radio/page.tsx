@@ -100,7 +100,7 @@ export default function Page() {
               checked={group2 === 1}
               onChange={onGroup2Change}
               name="group-2"
-              scale="xs"
+              className="scale-xs"
             >
               scale xs
             </Radio>
@@ -109,7 +109,7 @@ export default function Page() {
               checked={group2 === 2}
               onChange={onGroup2Change}
               name="group-2"
-              scale="sm"
+              className="scale-sm"
             >
               scale sm
             </Radio>
@@ -118,7 +118,7 @@ export default function Page() {
               checked={group2 === 3}
               onChange={onGroup2Change}
               name="group-2"
-              scale="md"
+              className="scale-md"
             >
               scale md
             </Radio>
@@ -127,7 +127,7 @@ export default function Page() {
               checked={group2 === 4}
               onChange={onGroup2Change}
               name="group-2"
-              scale="lg"
+              className="scale-lg"
             >
               scale lg
             </Radio>
@@ -136,7 +136,7 @@ export default function Page() {
               checked={group2 === 5}
               onChange={onGroup2Change}
               name="group-2"
-              scale="xl"
+              className="scale-xl"
             >
               scale xl
             </Radio>
@@ -147,7 +147,7 @@ export default function Page() {
               checked={group3 === 1}
               onChange={onGroup3Change}
               name="group-3"
-              scale="xs"
+              className="scale-xs"
             >
               scale xs
             </RadioBorder>
@@ -156,7 +156,7 @@ export default function Page() {
               checked={group3 === 2}
               onChange={onGroup3Change}
               name="group-3"
-              scale="sm"
+              className="scale-sm"
             >
               scale sm
             </RadioBorder>
@@ -165,7 +165,7 @@ export default function Page() {
               checked={group3 === 3}
               onChange={onGroup3Change}
               name="group-3"
-              scale="md"
+              className="scale-md"
             >
               scale md
             </RadioBorder>
@@ -174,7 +174,7 @@ export default function Page() {
               checked={group3 === 4}
               onChange={onGroup3Change}
               name="group-3"
-              scale="lg"
+              className="scale-lg"
             >
               scale lg
             </RadioBorder>
@@ -183,7 +183,7 @@ export default function Page() {
               checked={group3 === 5}
               onChange={onGroup3Change}
               name="group-3"
-              scale="xl"
+              className="scale-xl"
             >
               scale xl
             </RadioBorder>

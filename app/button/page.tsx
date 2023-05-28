@@ -10,12 +10,16 @@ export default function Page() {
     <>
       <h2 className="text-xl mt-12">Variants</h2>
       <ComponentViewer>
-        <div className="flex flex-col gap-4">
+        <div className="flex flex-col gap-4 items-start">
           <ButtonPrimary>Primary</ButtonPrimary>
           <Button>secondary</Button>
           <Button>
-            <MagnifyingGlassIcon className="icon mr-1" />
+            <MagnifyingGlassIcon className="icon" />
             Icon
+          </Button>
+
+          <Button>
+            <MagnifyingGlassIcon className="icon" />
           </Button>
           <ButtonPrimary disabled className="loading">
             Loading
@@ -25,19 +29,19 @@ export default function Page() {
           </Button>
           <ButtonPrimary disabled>Disabled</ButtonPrimary>
           <Button disabled>Disabled</Button>
-          <Button className="!rounded-full">Pill</Button>
-          <Button ghost>Ghost</Button>
+          <Button className="!rounded-full">Pill button</Button>
+          <Button ghost>Ghost button</Button>
         </div>
       </ComponentViewer>
 
       <h2 className="text-xl mt-12">Size</h2>
       <ComponentViewer>
         <div className="flex gap-4 items-start">
-          <Button scale="xs">scale XS</Button>
-          <Button scale="sm">scale SM</Button>
-          <Button scale="md">Normal</Button>
-          <Button scale="lg">scale LG</Button>
-          <Button scale="xl">scale XL</Button>
+          <Button className="scale-xs">scale XS</Button>
+          <Button className="scale-sm">scale SM</Button>
+          <Button className="scale-md">Normal</Button>
+          <Button className="scale-lg">scale LG</Button>
+          <Button className="scale-xl">scale XL</Button>
         </div>
       </ComponentViewer>
     </>

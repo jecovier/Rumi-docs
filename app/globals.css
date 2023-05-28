@@ -2,37 +2,92 @@
 @tailwind components;
 @tailwind utilities;
 
+
+/**
+| ---------------------------------
+|   Body
+| ---------------------------------
+*/
 body {
     @apply bg-light-50 text-light-600 dark:bg-dark-700 dark:text-dark-200;
 }
 
-.scale-xs {
-    @apply px-2 py-1 text-xs
-}
-.scale-sm {
-    @apply px-2.5 py-1.5 text-sm
+/**
+| ---------------------------------
+|   Scale
+| ---------------------------------
+*/
+@layer utilities{
+    .scale {
+        @apply px-4 py-2 text-sm
+    }
+
+    .scale-xs {
+        @apply px-2 py-1 text-xs
+    }
+    .scale-sm {
+        @apply px-2.5 py-1.5 text-sm
+    }
+
+    .scale-md {
+        @apply px-4 py-2 text-sm
+    }
+
+    .scale-lg {
+        @apply px-4 py-2.5 text-base
+    }
+
+    .scale-xl {
+        @apply px-4 py-3 text-lg
+    }
 }
 
-.scale-md {
-    @apply px-4 py-2 text-sm
+.scale .scale-size{
+    @apply w-4 h-4 rounded;
 }
 
-.scale-lg {
-    @apply px-4 py-2.5 text-base
+.scale-xs .scale-size {
+    @apply w-3 h-3 rounded-sm;
+}
+.scale-sm .scale-size {
+    @apply w-3.5 h-3.5 rounded;
+}
+.scale-md .scale-size {
+    @apply w-4 h-4 rounded;
+}
+.scale-lg .scale-size {
+    @apply w-5 h-5 rounded;
+}
+.scale-xl .scale-size {
+    @apply w-6 h-6 rounded;
 }
 
-.scale-xl {
-    @apply px-4 py-3 text-lg
-}
+/**
+| ---------------------------------
+|   Icon
+| ---------------------------------
+*/
 
 .icon {
-    width: 1.1em;
-    height: 1.1em;
+    width: 1.16em;
+    height: 1.16em;
+    @apply m-0.5;
 }
 
+/**
+| ---------------------------------
+|   Placeholder
+| ---------------------------------
+*/
 .input::placeholder, textarea::placeholder{
     @apply opacity-100 text-light-400/80 dark:text-dark-400/70;
 }
+
+/**
+| ---------------------------------
+|   Disabled
+| ---------------------------------
+*/
 *:disabled .input::placeholder,
 .disabled .input::placeholder {
     @apply text-light-600/90 dark:text-dark-300/90
@@ -43,18 +98,23 @@ body {
     @apply pointer-events-none opacity-50 cursor-not-allowed;
 }
 
-
+/**
+| ---------------------------------
+|   Loading
+| ---------------------------------
+*/
 .loading,
 .loading:hover {
+    color: transparent !important;
     position: relative;
-    text-indent: -500vw;
     cursor: progress;
     opacity: 0.86;
     pointer-events:none;
 }
   
 .loading::after {
-    content: "";
+    @apply border-2 border-light-700 dark:border-dark-300;
+    content: " ";
     position: absolute;
     width: 1.25em;
     height: 1.25em;
@@ -63,7 +123,6 @@ body {
     right: 0;
     bottom: 0;
     margin: auto;
-    border: 2px solid currentColor;
     border-top-color: transparent;
     border-right-color: transparent;
     border-radius: 50%;
@@ -80,10 +139,12 @@ body {
     }
 }
 
-/**
- * INPUT NUMBER
- */
 
+/**
+| ---------------------------------
+|   Input Number
+| ---------------------------------
+*/
 /* Works for Firefox */
 .input[type="number"] {
     -webkit-appearance: none;
@@ -99,9 +160,12 @@ body {
     appearance: auto;
 }
 
+
 /**
- * SELECT
- */
+| ---------------------------------
+|   Select
+| ---------------------------------
+*/
 .select::-ms-expand {
     display: none;
 }
@@ -122,6 +186,12 @@ body {
         background-image: url("data:image/svg+xml;utf-8,<svg xmlns='http://www.w3.org/2000/svg' width='1em' height='1em' fill='white' viewBox='0 0 24 24'><circle cx='12' cy='12' r='5'/></svg>");
     }
 }
+
+/**
+| ---------------------------------
+|   Switch
+| ---------------------------------
+*/
 
 .switch span::before{
     content: " ";
@@ -171,7 +241,53 @@ body {
     right: 1.35em;
 }
 
+
+/**
+| ---------------------------------
+|   Dialog
+| ---------------------------------
+*/
 dialog::backdrop {
-    background-color: rgb(4, 4, 16);
-    backdrop-filter: blur(5px);
-  }
+    backdrop-filter: blur(4px);
+}
+
+
+/**
+| ---------------------------------
+|   Tooltip
+| ---------------------------------
+*/
+
+.tooltip > span::after {
+    content: " ";
+    @apply absolute border-8 border-transparent;
+}
+
+.tooltip:hover > span {
+    @apply block;
+}
+
+.tooltip > span.top::after  {
+    @apply top-full -mb-1.5 border-t-light-600 dark:border-t-dark-900 left-1/2 -translate-x-1/2;
+}
+
+.tooltip > span.left::after  {
+    @apply right-full -ml-1.5 border-r-light-600 dark:border-r-dark-900 bottom-1/2 translate-y-1/2;
+}
+
+.tooltip > span.right::after  {
+    @apply left-full -mr-1.5 border-l-light-600 dark:border-l-dark-900 bottom-1/2 translate-y-1/2;
+}
+
+.tooltip > span.bottom::after  {
+    @apply bottom-full -mt-1.5 border-b-light-600 dark:border-b-dark-900 left-1/2 -translate-x-1/2;
+}
+
+/**
+| ---------------------------------
+|   Toggle-Option
+| ---------------------------------
+*/
+.toggle-option input:checked + span  {
+    @apply bg-light-50 dark:bg-dark-600 border-light-300 dark:border-dark-500 rounded;
+}

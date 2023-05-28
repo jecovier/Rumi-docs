@@ -23,11 +23,11 @@ export default function Page() {
       <ComponentViewer>
         <div className="flex flex-col">
           <div className="flex items-start gap-4">
-            <Switch scale="xs">scale xs</Switch>
-            <Switch scale="sm">scale sm</Switch>
-            <Switch scale="md">scale md</Switch>
-            <Switch scale="lg">scale lg</Switch>
-            <Switch scale="xl">scale xl</Switch>
+            <Switch className="scale-xs">scale xs</Switch>
+            <Switch className="scale-sm">scale sm</Switch>
+            <Switch className="scale-md">scale md</Switch>
+            <Switch className="scale-lg">scale lg</Switch>
+            <Switch className="scale-xl">scale xl</Switch>
           </div>
         </div>
       </ComponentViewer>

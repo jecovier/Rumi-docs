@@ -1,13 +1,15 @@
-import Button from "./Button";
+import Button, { type ButtonGroupProps } from "./Button";
+
+export interface ButtonDialogCloseGroupProps extends ButtonGroupProps {
+  children?: React.ReactNode;
+  className?: string;
+}
 
 export default function ButtonDialogClose({
   children,
   className,
   ...restProps
-}: {
-  children?: React.ReactNode;
-  className?: string;
-}) {
+}: ButtonDialogCloseGroupProps) {
   return (
     <form>
       <Button

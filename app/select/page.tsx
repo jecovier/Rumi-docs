@@ -40,19 +40,19 @@ export default function Page() {
       <h2 className="text-xl mt-12">Sizes</h2>
       <ComponentViewer>
         <div className="flex items-start gap-4">
-          <Select scale="xs">
+          <Select className="scale-xs">
             <option>scale xs</option>
           </Select>
-          <Select scale="sm">
+          <Select className="scale-sm">
             <option>scale sm</option>
           </Select>
-          <Select scale="md">
+          <Select className="scale-md">
             <option>scale md</option>
           </Select>
-          <Select scale="lg">
+          <Select className="scale-lg">
             <option>scale lg</option>
           </Select>
-          <Select scale="xl">
+          <Select className="scale-xl">
             <option>scale xl</option>
           </Select>
         </div>
