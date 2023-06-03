@@ -3,6 +3,7 @@ import Link from "next/link";
 const menuOptions = [
   { label: "Button", href: "/button" },
   { label: "Input", href: "/input" },
+  { label: "Range", href: "/range" },
   { label: "Textarea", href: "/textarea" },
   { label: "Select", href: "/select" },
   { label: "Checkbox", href: "/checkbox" },

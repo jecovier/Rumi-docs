@@ -30,15 +30,15 @@ body {
     }
 
     .scale-md {
-        @apply px-4 py-2 text-sm
+        @apply px-4 py-2 text-base
     }
 
     .scale-lg {
-        @apply px-4 py-2.5 text-base
+        @apply px-4 py-2.5 text-lg
     }
 
     .scale-xl {
-        @apply px-4 py-3 text-lg
+        @apply px-4 py-3 text-xl
     }
 }
 
@@ -291,3 +291,59 @@ dialog::backdrop {
 .toggle-option input:checked + span  {
     @apply bg-light-50 dark:bg-dark-600 border-light-300 dark:border-dark-500 rounded;
 }
+
+/**
+| ---------------------------------
+|   Input Range
+| ---------------------------------
+*/
+ 
+ /***** Chrome, Safari, Opera and Edge Chromium styles *****/
+ /* slider track */
+.range::-webkit-slider-runnable-track {
+    @apply bg-transparent h-[0.4em] my-2;
+ }
+ .range::-webkit-slider-runnable-progress {
+    @apply bg-light-400/70 dark:bg-dark-400 rounded-full h-[0.4em];
+}
+ /* slider thumb */
+ .range::-webkit-slider-thumb
+{
+   -webkit-appearance: none; /* Override default look */
+    appearance: none;
+    margin-top: -0.4em; /* Centers thumb on the track */
+    border: 1px solid;
+    border-radius: 50%;
+    height: 1.2em;
+    width: 1.2em;
+    box-shadow: -10.5em 0em 0 10em var(--tw-shadow-color);
+    @apply bg-white border-light-400/70 dark:border-dark-400/70 outline-none dark:bg-dark-700 shadow-light-400/70 dark:shadow-dark-400/70;
+ }
+ .range:focus::-webkit-slider-thumb {
+    @apply border-primary-500 dark:border-primary-300 shadow-primary-500;
+ }
+ 
+ /******** Firefox styles ********/
+ /* slider track */
+ .range::-moz-range-track {
+    @apply bg-transparent h-[0.4em];
+ }
+ .range::-moz-range-progress {
+     @apply bg-transparent;
+}
+.range::-moz-range-thumb {
+    margin-top: -0.4em; /* Centers thumb on the track */
+    border: 1px solid;
+    border-radius: 50%;
+    height: 1.1em;
+    width: 1.1em;
+    box-shadow: -10.5em 0em 0 10em var(--tw-shadow-color);
+    @apply bg-white border-light-400/70 dark:border-dark-400/70 outline-none dark:bg-dark-700 shadow-light-400/70 dark:shadow-dark-400/70;
+}
+.range:hover::-moz-range-thumb {
+    @apply border-light-500/70 dark:border-dark-300/70
+}
+
+.range:focus::-moz-range-thumb {
+    @apply border-primary-500 dark:border-primary-300 shadow-primary-500;
+ }

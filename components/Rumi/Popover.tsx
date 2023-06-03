@@ -80,9 +80,11 @@ export default function Popover({
         className={`fixed inset-0 z-40 ${
           isActive && trigger != "hover" ? "block" : "hidden"
         }`}
-        {...((trigger == "click" || !trigger) && {
-          onClick: () => toggle(false),
-        })}
+        {...(trigger == "click" || !trigger
+          ? {
+              onClick: () => toggle(false),
+            }
+          : {})}
       ></div>
     </div>
   );

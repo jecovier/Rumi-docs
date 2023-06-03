@@ -67,11 +67,8 @@ export default function Page() {
           <Input type="image" placeholder="image" />
         <Input type="submit" placeholder="submit" /> */}
 
-          {/* <Input type="color" placeholder="color" />
-          <Input type="range" placeholder="range" /> */}
-          {/* <Input type="checkbox" placeholder="checkbox" /> */}
+          {/* <Input type="color" placeholder="color" />*/}
           {/* <Input type="file" placeholder="file" /> */}
-          {/* <Input type="radio" placeholder="radio" /> */}
         </div>
       </ComponentViewer>
     </>
