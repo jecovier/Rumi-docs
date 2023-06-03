@@ -202,7 +202,7 @@ body {
     top: calc(50% - 0.65em);
     left: 0;
     border-radius: 1em;
-    @apply dark:bg-dark-500 border dark:border-dark-500
+    @apply bg-light-300/80 dark:bg-dark-500
 }
 
 .switch span::after{
@@ -211,18 +211,22 @@ body {
     position: absolute;
     width: 0.9em;
     height: 0.9em;
-    background-color: currentColor;
     top: calc(50% - 0.45em);
     left: calc(0.2em + 1px);
     border-radius: 100%;
     transition: all ease-out 0.16s ;
+    @apply bg-white dark:bg-dark-300/70;
+}
+
+.switch input:checked + span::after{
+    @apply bg-white
 }
 
 .switch input:checked + span::after{
     left: 1.35em;
 }
 .switch input:checked + span::before{
-    @apply dark:bg-primary-500 dark:border-primary-500;
+    @apply bg-primary-500 border-primary-500 dark:bg-primary-500 dark:border-primary-500;
 }
 
 
