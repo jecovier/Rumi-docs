@@ -5,7 +5,15 @@ export interface ToggleGroupProps
   name: string;
 }
 
-export const ToggleContext = createContext(null);
+interface ToggleContextType {
+  toggleData: { group: string };
+  setToggleData: React.Dispatch<React.SetStateAction<{ group: string }>>;
+  className: string | undefined;
+}
+
+export const ToggleContext = createContext<ToggleContextType | undefined>(
+  undefined
+);
 
 export default function Toggle({
   children,

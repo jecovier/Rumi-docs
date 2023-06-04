@@ -16,7 +16,7 @@ export default function ButtonDialogClose({
         className={className}
         {...restProps}
         value="cancel"
-        formmethod="dialog"
+        formMethod="dialog"
       >
         {children}
       </Button>

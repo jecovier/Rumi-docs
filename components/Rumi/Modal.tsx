@@ -15,11 +15,7 @@ export default function Modal({
       className="modal relative w-11/12 max-w-4xl bg-transparent backdrop:bg-light-700/50 backdrop:dark:bg-dark-900/50"
       {...restProps}
     >
-      <ButtonDialogClose
-        className="absolute z-10 top-4 right-4"
-        className="scale-sm"
-        ghost
-      >
+      <ButtonDialogClose className="absolute z-10 top-4 right-4 scale-sm" ghost>
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"

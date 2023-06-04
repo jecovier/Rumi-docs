@@ -1,5 +1,10 @@
 function isClickInsideDialog(event: MouseEvent) {
-  const rect = event.target.getBoundingClientRect();
+  if (!event?.target) {
+    return false;
+  }
+
+  const element = event.target as HTMLElement;
+  const rect = element.getBoundingClientRect();
   return (
     rect.top <= event.clientY &&
     event.clientY <= rect.top + rect.height &&
@@ -10,8 +15,13 @@ function isClickInsideDialog(event: MouseEvent) {
 
 export default function useClickOutsideDialog(callback: Function) {
   function clickOutside(event: MouseEvent) {
+    if (!event?.target) {
+      return;
+    }
+
+    const element = event.target as HTMLElement;
     // avoid issues when you click elements inside dialog
-    if (event?.target?.nodeName !== "DIALOG") return;
+    if (element.nodeName !== "DIALOG") return;
 
     if (!isClickInsideDialog(event)) {
       callback(event);

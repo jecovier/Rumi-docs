@@ -9,13 +9,13 @@ export default function ToggleOption({
   className,
   ...restProps
 }: ToggleOptionGroupProps) {
-  const { toggleData, className: rootClassName } = useContext(ToggleContext);
+  const { toggleData, className: rootClassName } =
+    useContext(ToggleContext) ?? {};
   return (
     <label className="toggle-option">
       <input
         type="radio"
-        name={toggleData.group}
-        onSelect={() => setToggleData()}
+        name={toggleData?.group}
         className="hidden"
         {...restProps}
       />
