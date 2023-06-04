@@ -20,7 +20,7 @@ export default function ToggleOption({
         {...restProps}
       />
       <span
-        className={`inline-flex items-center gap-1.5 scale border border-transparent ${
+        className={`inline-flex rounded items-center gap-1.5 scale border border-transparent cursor-pointer hover:bg-light-100/50 hover:dark:bg-dark-700/50 ${
           rootClassName ?? ""
         } ${className ?? ""}`}
       >
