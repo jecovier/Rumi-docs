@@ -1,6 +1,5 @@
 export interface ButtonGroupProps
   extends React.ComponentPropsWithoutRef<"button"> {
-  scale?: string;
   ghost?: boolean;
 }
 

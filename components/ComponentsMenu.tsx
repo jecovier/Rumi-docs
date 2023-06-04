@@ -1,6 +1,7 @@
 import Link from "next/link";
 
 const menuOptions = [
+  { label: "Home", href: "/" },
   { label: "Button", href: "/button" },
   { label: "Input", href: "/input" },
   { label: "Range", href: "/range" },
