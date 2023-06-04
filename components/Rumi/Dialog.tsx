@@ -30,7 +30,7 @@ export default function Dialog({
 
   useEffect(() => {
     Boolean(open) ? openDialog() : closeDialog();
-  }, [open]);
+  }, [open, openDialog, closeDialog]);
 
   return (
     <dialog ref={ref} {...restProps}>
