@@ -18,7 +18,8 @@ const menuOptions = [
   { label: "Popover", href: "/popover" },
   // { label: "Progress", href: "/progress" },
   { label: "Card", href: "/card" },
-  // { label: "Divider", href: "/divider" },
+  { label: "Alert", href: "/alert" },
+  { label: "Divider", href: "/divider" },
   // { label: "Accordion", href: "/accordion" },
 ];
 

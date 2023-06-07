@@ -1,5 +1,6 @@
 import ButtonDialogClose from "./ButtonDialogClose";
 import Card from "./Card";
+import CloseIcon from "./CloseIcon";
 import Dialog from "./Dialog";
 
 export interface DialogGroupProps
@@ -16,21 +17,7 @@ export default function Modal({
       {...restProps}
     >
       <ButtonDialogClose className="absolute z-10 top-4 right-4 scale-sm" ghost>
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          fill="none"
-          width="1.5em"
-          height="1.5em"
-          viewBox="0 0 24 24"
-          stroke-width="2"
-          stroke="currentColor"
-        >
-          <path
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            d="M6 18L18 6M6 6l12 12"
-          />
-        </svg>
+        <CloseIcon />
       </ButtonDialogClose>
       <Card className={`h-full text-light-700 dark:text-dark-200 ${className}`}>
         {children}
