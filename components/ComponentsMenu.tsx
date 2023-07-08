@@ -19,7 +19,8 @@ const menuOptions = [
   // { label: "Progress", href: "/progress" },
   { label: "Card", href: "/card" },
   { label: "Alert", href: "/alert" },
-  { label: "Divider", href: "/divider" },
+  { label: "Badge", href: "/badge" },
+  { label: "Separator", href: "/separator" },
   // { label: "Accordion", href: "/accordion" },
 ];
 

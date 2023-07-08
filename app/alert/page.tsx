@@ -36,6 +36,16 @@ export default function page() {
           </Alert>
         </div>
       </ComponentViewer>
+      <h2>Size</h2>
+      <ComponentViewer>
+        <div className="flex flex-col gap-4 w-full items-center justify-center">
+          <Alert className="scale-xs">This is an xs alert</Alert>
+          <Alert className="scale-sm">This is an sm alert</Alert>
+          <Alert className="scale-md">This is an md alert</Alert>
+          <Alert className="scale-lg">This is an lg alert</Alert>
+          <Alert className="scale-xl">This is an xl alert</Alert>
+        </div>
+      </ComponentViewer>
     </>
   );
 }

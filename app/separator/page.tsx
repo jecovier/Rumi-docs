@@ -2,8 +2,8 @@
 
 import ComponentViewer from "@/components/ComponentViewer";
 import HR from "@/components/Rumi/HR";
-import Divider from "@/components/Rumi/Divider";
-import DividerVertical from "@/components/Rumi/DividerVertical";
+import Separator from "@/components/Rumi/Separator";
+import SeparatorVertical from "@/components/Rumi/SeparatorVertical";
 import { StarIcon } from "@heroicons/react/24/outline";
 
 export default function page() {
@@ -42,7 +42,7 @@ export default function page() {
         </div>
       </ComponentViewer>
 
-      <h2>Horizontal Divider</h2>
+      <h2>Horizontal Separator</h2>
       <ComponentViewer>
         <div className="flex flex-col">
           <p>
@@ -51,36 +51,43 @@ export default function page() {
             labore est suscipit itaque, eos placeat a voluptatem magnam pariatur
             harum atque!
           </p>
-          <Divider>
-            <StarIcon className="icon" />
-          </Divider>
+          <Separator />
           <p>
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aperiam
             laudantium minus ducimus maxime non quod obcaecati veritatis modi
             labore est suscipit itaque, eos placeat a voluptatem magnam pariatur
             harum atque!
           </p>
-          <Divider left>
+          <Separator>
             <StarIcon className="icon" />
-          </Divider>
+          </Separator>
           <p>
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aperiam
             laudantium minus ducimus maxime non quod obcaecati veritatis modi
             labore est suscipit itaque, eos placeat a voluptatem magnam pariatur
             harum atque!
           </p>
-          <Divider right>
+          <Separator left>
             <StarIcon className="icon" />
-          </Divider>
+          </Separator>
           <p>
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aperiam
             laudantium minus ducimus maxime non quod obcaecati veritatis modi
             labore est suscipit itaque, eos placeat a voluptatem magnam pariatur
             harum atque!
           </p>
-          <Divider center>
+          <Separator right>
             <StarIcon className="icon" />
-          </Divider>
+          </Separator>
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aperiam
+            laudantium minus ducimus maxime non quod obcaecati veritatis modi
+            labore est suscipit itaque, eos placeat a voluptatem magnam pariatur
+            harum atque!
+          </p>
+          <Separator center>
+            <StarIcon className="icon" />
+          </Separator>
           <p>
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aperiam
             laudantium minus ducimus maxime non quod obcaecati veritatis modi
@@ -90,7 +97,7 @@ export default function page() {
         </div>
       </ComponentViewer>
 
-      <h2>Vertical Divider</h2>
+      <h2>Vertical Separator</h2>
       <ComponentViewer>
         <div className="flex flex-col">
           <div className="flex">
@@ -100,9 +107,16 @@ export default function page() {
               labore est suscipit itaque, eos placeat a voluptatem magnam
               pariatur harum atque!
             </p>
-            <DividerVertical>
+            <SeparatorVertical />
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aperiam
+              laudantium minus ducimus maxime non quod obcaecati veritatis modi
+              labore est suscipit itaque, eos placeat a voluptatem magnam
+              pariatur harum atque!
+            </p>
+            <SeparatorVertical>
               <StarIcon className="icon" />
-            </DividerVertical>
+            </SeparatorVertical>
             <p>
               Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aperiam
               laudantium minus ducimus maxime non quod obcaecati veritatis modi
@@ -117,9 +131,9 @@ export default function page() {
               labore est suscipit itaque, eos placeat a voluptatem magnam
               pariatur harum atque!
             </p>
-            <DividerVertical center>
+            <SeparatorVertical center>
               <StarIcon className="icon" />
-            </DividerVertical>
+            </SeparatorVertical>
             <p>
               Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aperiam
               laudantium minus ducimus maxime non quod obcaecati veritatis modi
@@ -134,9 +148,9 @@ export default function page() {
               labore est suscipit itaque, eos placeat a voluptatem magnam
               pariatur harum atque!
             </p>
-            <DividerVertical top>
+            <SeparatorVertical top>
               <StarIcon className="icon" />
-            </DividerVertical>
+            </SeparatorVertical>
             <p>
               Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aperiam
               laudantium minus ducimus maxime non quod obcaecati veritatis modi
@@ -151,9 +165,9 @@ export default function page() {
               labore est suscipit itaque, eos placeat a voluptatem magnam
               pariatur harum atque!
             </p>
-            <DividerVertical bottom>
+            <SeparatorVertical bottom>
               <StarIcon className="icon" />
-            </DividerVertical>
+            </SeparatorVertical>
             <p>
               Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aperiam
               laudantium minus ducimus maxime non quod obcaecati veritatis modi

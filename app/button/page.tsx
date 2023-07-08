@@ -2,6 +2,7 @@
 
 import ComponentViewer from "@/components/ComponentViewer";
 import Button from "@/components/Rumi/Button";
+import Buttond from "@/components/Rumi/Buttond";
 import ButtonPrimary from "@/components/Rumi/ButtonPrimary";
 import { MagnifyingGlassIcon } from "@heroicons/react/24/outline";
 
@@ -13,6 +14,7 @@ export default function Page() {
         <div className="flex flex-col gap-4 items-start">
           <ButtonPrimary>Primary</ButtonPrimary>
           <Button>secondary</Button>
+          <Buttond>secondary</Buttond>
           <Button>
             <MagnifyingGlassIcon className="icon" />
             Icon
