@@ -8,7 +8,7 @@ export interface callbackDTO {
   rgb?: Array<number>;
   opacity?: number;
 }
-export type colorClassCallback = (colorDTO: callbackDTO) => object;
+export type ColorClassCallback = (colorDTO: callbackDTO) => object;
 
 const hexToRGB = (hex: string) => {
   var c;

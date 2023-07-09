@@ -1,19 +1,19 @@
-import { type colorClassCallback, ColorUtility } from "./colorUtility";
-type colorCollection = Record<string, string | unknown>;
+import { type ColorClassCallback, ColorUtility } from "./colorUtility";
+type ColorCollection = Record<string, string | unknown>;
 
 /**
  * Generate a list of classes with all possible
  * colors variations configured in tailwind
  *
- * @param colors colorCollection
+ * @param colors ColorCollection
  * @param prefix string
- * @param getRulesCallback () => object
+ * @param colorClassCallback () => object
  * @returns
  */
 const generateColorClasses = (
-  colors: colorCollection,
+  colors: ColorCollection,
   prefix: string,
-  getRulesCallback: colorClassCallback
+  colorClassCallback: ColorClassCallback
 ): object => {
   return Object.keys(colors).reduce((acc: object, key: string) => {
     const className = `${prefix}-${key}`;
@@ -28,9 +28,9 @@ const generateColorClasses = (
       return {
         ...acc,
         ...generateColorClasses(
-          currentColor as colorCollection,
+          currentColor as ColorCollection,
           className,
-          getRulesCallback
+          colorClassCallback
         ),
       };
     }
@@ -40,7 +40,7 @@ const generateColorClasses = (
     const colorUtility = new ColorUtility(
       className,
       currentColor as string,
-      getRulesCallback
+      colorClassCallback
     );
     /**
      * If color value is not a valid HexColor, we can not
