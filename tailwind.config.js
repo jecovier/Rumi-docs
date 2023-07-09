@@ -1,8 +1,9 @@
 /** @type {import('tailwindcss').Config} */
 
 const colors = require("tailwindcss/colors");
-const outlined = require("./components/Rumi/plugins/outlined");
-const solid = require("./components/Rumi/plugins/solid");
+const contrast = require("./components/Rumi/plugins/contrast");
+const base = require("./components/Rumi/plugins/base");
+const color = require("./components/Rumi/plugins/color");
 
 module.exports = {
   content: [
@@ -20,5 +21,5 @@ module.exports = {
       },
     },
   },
-  plugins: [outlined, solid],
+  plugins: [contrast, base, color],
 };

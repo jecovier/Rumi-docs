@@ -1,6 +1,7 @@
 "use client";
 import ComponentViewer from "@/components/ComponentViewer";
 import Input from "@/components/Rumi/Input";
+import Inputd from "@/components/Rumi/Inputd";
 import InputContent from "@/components/Rumi/InputContent";
 import { MagnifyingGlassIcon, NoSymbolIcon } from "@heroicons/react/24/outline";
 
@@ -11,6 +12,7 @@ export default function Page() {
       <ComponentViewer>
         <div className="flex flex-col items-start gap-4">
           <Input type="text" />
+          <Inputd type="text" placeholder="jjjjj" className="color-red-500" />
           <Input type="text" placeholder="placeholder" />
           <Input type="text" value="normal value" />
           <InputContent type="text" placeholder="prefix">

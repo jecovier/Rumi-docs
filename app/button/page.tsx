@@ -2,7 +2,6 @@
 
 import ComponentViewer from "@/components/ComponentViewer";
 import Button from "@/components/Rumi/Button";
-import Buttond from "@/components/Rumi/Buttond";
 import ButtonPrimary from "@/components/Rumi/ButtonPrimary";
 import { MagnifyingGlassIcon } from "@heroicons/react/24/outline";
 
@@ -14,7 +13,6 @@ export default function Page() {
         <div className="flex flex-col gap-4 items-start">
           <ButtonPrimary>Primary</ButtonPrimary>
           <Button>secondary</Button>
-          <Buttond>secondary</Buttond>
           <Button>
             <MagnifyingGlassIcon className="icon" />
             Icon
@@ -32,6 +30,12 @@ export default function Page() {
           <ButtonPrimary disabled>Disabled</ButtonPrimary>
           <Button disabled>Disabled</Button>
           <Button className="!rounded-full">Pill button</Button>
+          <Button className="color-red-500 dark:color-red-400">
+            Color red
+          </Button>
+          <Button className="color-emerald-500 dark:color-emerald-400">
+            Color emerald
+          </Button>
           <Button ghost>Ghost button</Button>
         </div>
       </ComponentViewer>
